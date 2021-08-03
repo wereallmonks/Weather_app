@@ -1,6 +1,6 @@
-var fetchWeather = "/weather";
 const button = document.querySelector(".search button")
-const textBox = document.querySelector(".search-bar")
+const textBox = document.querySelector(".search-bar") 
+
 
 const place = document.querySelector(".city");
 const icon = document.querySelector(".icon");
@@ -11,16 +11,16 @@ const wind = document.querySelector(".wind");
 
 button.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log(textBox.value);
     place.textContent = "Searching...";
     temp.textContent = "";
     details.textContent= "";
-    const api_url = fetchWeather + "?address=" + textBox.value;
-    async () => {
-       const response = await fetch(api_url);
-       const json = await response.json(); 
-       console.log(json)
-    } 
+    const cityname = textBox.value
+    const fetchWeather = `weather/${cityname}`;
+    fetch(fetchWeather).then(response => {
+        response.json().then(data => {
+            console.log(data)
+        })
+    })  
 })
 
 
