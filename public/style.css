@@ -26,7 +26,7 @@ body {
   justify-content: center;   
 }
 
-button#search {
+button {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -52,7 +52,7 @@ input.search-bar {
     width: calc(100% - 100px);
 }
 
-button#search:hover {
+button:hover {
     background: #7c7c7c6b;
 }
 
