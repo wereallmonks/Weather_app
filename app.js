@@ -27,7 +27,7 @@ const { icon, description } = json.weather[0];
 const { temp, humidity } = json.main;
 const { speed } = json.wind;
 
-console.log(description)
+console.log(description, temp, humidity, speed)
 });
 
 
